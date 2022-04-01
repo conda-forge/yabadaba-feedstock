@@ -1,5 +1,5 @@
 {% set name = "yabadaba" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9dbf56a1d412d1435992044ddd7316c92a70dd445dd66a82efbdd85c24b3c1e
+  sha256: 6a61263deac2a773146d72767a5f2a21f2e8c9d18d49c5db240348b90f4a9edf
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - lxml
     - datamodeldict
     - ipython
-    - numpy 
+    - numpy
     - pandas
     - cdcs >=0.1.5
     - pymongo
