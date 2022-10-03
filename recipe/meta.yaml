@@ -27,6 +27,7 @@ requirements:
     - pandas
     - cdcs >=0.1.5
     - pymongo
+    - tqdm
 
 test:
   imports:
