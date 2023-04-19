@@ -25,7 +25,7 @@ requirements:
     - ipython
     - numpy
     - pandas
-    - cdcs >=0.1.5
+    - cdcs >=0.2.1
     - pymongo
     - tqdm
 
