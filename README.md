@@ -1,11 +1,11 @@
-About yabadaba
-==============
+About yabadaba-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yabadaba-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/usnistgov/yabadaba
 
 Package license: NIST-PD
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/yabadaba-feedstock/blob/main/LICENSE.txt)
 
 Summary: An abstraction layer for NoSQL databases
 
