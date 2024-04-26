@@ -1,5 +1,5 @@
 {% set name = "yabadaba" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aa9449348c6581fbb9acffd9e14bbe645389eae62066d76e148c24c451f3911b
+  sha256: f7bbe60bac4828568a0c7c93162a77248256165a06223768621bd58c8668654a
 
 build:
   noarch: python
