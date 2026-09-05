@@ -1,0 +1,60 @@
+schema_version: 1
+
+context:
+  name: yabadaba
+  version: "0.4.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 28969a221ae11b4abeb089dcc7c32b026ca6812bdbec8f3ad148809235e2444a
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - uv-build
+  run:
+    - python >=${{ python_min }}
+    - lxml
+    - datamodeldict
+    - ipython
+    - numpy
+    - pandas
+    - cdcs >=0.2.1
+    - pymongo
+    - tqdm
+    - pillow
+
+tests:
+  - python:
+      imports:
+        - yabadaba
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: NIST-PD
+  license_file: LICENSE.TXT
+  summary: An abstraction layer for NoSQL databases
+  description: |
+    Yay, a base database! An abstraction layer allowing for common interactions
+    with Mongo, CDCS and local directory databases and records.
+  homepage: https://github.com/usnistgov/yabadaba
+  repository: https://github.com/lmale99/yabadaba
+  documentation: https://github.com/usnistgov/yabadaba
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
+    - lmhale99
