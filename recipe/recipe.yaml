@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: yabadaba
-  version: "0.4.0"
+  version: "0.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 28969a221ae11b4abeb089dcc7c32b026ca6812bdbec8f3ad148809235e2444a
+  sha256: e9baf759ce28085072c0a8e8a055a2fe93d3ac840c36df0a498fc1f0065477ab
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
